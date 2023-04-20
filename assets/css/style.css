@@ -1,0 +1,131 @@
+:root {
+    --primary: hsl(150, 36%, 37%);
+    --primary-hover: hsl(150, 36%, 25%);
+    --background: hsl(30, 38%, 92%);
+    --heading: hsl(212, 21%, 14%);
+    --text: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-size: 14px;
+    color: var(--text);
+    min-height: 100vh;
+    background-color: var(--background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.product-card {
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 335px;
+}
+
+.perfume-image {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    gap: 10px;
+}
+
+.perfume-heading {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    
+}
+
+.product-card h2 {
+    font-family: 'Fraunces', serif;
+    color: var(--heading);
+    font-size: 34px;
+}
+
+.description {
+    line-height: 25px;
+}
+
+.prices {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.prices h3 {
+    color: var(--primary);
+    font-family: 'Fraunces', serif;
+    font-size: 34px;
+}
+
+.old-price {
+    text-decoration: line-through;
+}
+
+.btn {
+    width: 100%;
+    color: var(--white);
+    background-color: var(--primary);
+    padding: 20px 30px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn:hover {
+    background-color: var(--primary-hover);
+}
+
+.attribution {
+    font-size: 11px; text-align: center; 
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 670px) {
+    .product-card {
+        flex-direction: row;
+        max-width: 670px;
+        align-content:stretch;
+    }
+    
+    .perfume-image {
+        width: 335px;
+        border-radius: 10px 0 0 10px;
+        content:url('../images/image-product-desktop.jpg');
+    }
+    .product-info {
+        border-radius: 0 10px 10px 0;
+        width: 335px;
+        gap: 20px;
+        padding: 40px;
+    }
+
+}
